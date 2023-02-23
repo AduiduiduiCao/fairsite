@@ -9,6 +9,8 @@ import 'package:fairsite/providers/firestore.dart';
 import 'package:timeago/timeago.dart' as timeago;
 import 'asset_list.dart';
 import 'add_digital_assets.dart';
+import 'delete_widget_button.dart';
+
 
 class CompanyInfo extends ConsumerWidget {
   final String entityId;
@@ -63,7 +65,14 @@ class CompanyInfo extends ConsumerWidget {
                 // Issue with overflow is making the button unclickable
                 // ISSUE #2
 
-                Flexible(flex: 1, child: AddDigitalAssetsDialog(entityId)),
+                Flexible(flex: 1, child: Row (
+                  children: [
+                    Expanded(child: AddDigitalAssetsDialog(entityId)),
+
+                    // Added the delete button here for testing
+                    Expanded(child: DeleteAssets(entityId)),
+                  ],
+                  ),),
 
                 Flexible(flex: 5, child: AssetListView(entityId)),
 
