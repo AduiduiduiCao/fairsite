@@ -102,7 +102,29 @@ class _SelectedValueState extends State<AddDigitalAssetsDialog> {
                                   style: ElevatedButton.styleFrom(
                                       primary: Colors.green,
                                       padding: EdgeInsets.all(20)),
-                                  child: const Text("Save"))
+                                  child: const Text("Save")),
+                              // ElevatedButton(
+                              //   onPressed: () async {
+                              //     // Code to handle deleting the asset
+                              //     await FirebaseFirestore.instance
+                              //         .collection('company')
+                              //         .doc(_entityId)
+                              //         .collection('asset')
+                              //         .where('id', isEqualTo: _formData['asset_id'])
+                              //         .get()
+                              //         .then((querySnapshot) {
+                              //       querySnapshot.docs.forEach((doc) {
+                              //         doc.reference.delete();
+                              //       });
+                              //     });
+                              //     Navigator.pop(context);
+                              //   },
+                              //   style: ElevatedButton.styleFrom(
+                              //     backgroundColor: Colors.red,
+                              //     padding: EdgeInsets.all(20),
+                              //   ),
+                              //   child: const Text('Delete Asset'),
+                              // ),
                             ],
                           ))
                         ]);
